@@ -21,11 +21,9 @@ app.get("/result", (req, res) => {
     }else {
         var bmi = (kg / (m * m));
         res.render("pages/result", {
-            bmi: bmi
+            bmi: bmi 
         });
-    }
-
-  
+    }  
 });
 
 var port = 8080;

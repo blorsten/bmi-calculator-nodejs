@@ -1,0 +1,12 @@
+@startuml
+
+(*) --> "user entered BMI"
+
+if "Is input valid" then
+    --> [true] "Calculate BMI\nRedirect to result page"
+    --> (*)
+else
+    --> [false] "Redirect to frontpage"
+    --> (*)
+
+@enduml
