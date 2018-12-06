@@ -1,4 +1,4 @@
-import BMICalculator from "./BMICalculator";
+var BMICalculator = require("./BMICalculator");
 var express = require("express");
 
 // create express app

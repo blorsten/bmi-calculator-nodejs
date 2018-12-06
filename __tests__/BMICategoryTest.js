@@ -1,4 +1,4 @@
-import BMICalculator from "./BMICalculator";
+import BMICalculator from "../BMICalculator";
 
 beforeAll( () => {
 
