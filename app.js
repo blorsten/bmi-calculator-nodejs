@@ -1,3 +1,4 @@
+import BMICalculator from "./BMICalculator";
 var express = require("express");
 
 // create express app
@@ -12,16 +13,20 @@ app.get("/", (req, res) => {
     res.render("pages/landing");
 });
 
-app.get("/result", (req, res) => {
-    var m = (parseInt(req.query.cm, 10) / 100);
-    var kg = req.query.kg;
 
+app.get("/result", (req, res) => {
+    var cm = req.query.cm;
+    var kg = req.query.kg;
+    var m = BMICalculator.calculateM(cm);
+    
     if(m == 0 || isNaN(m)){
         res.redirect("/");
-    }else {
-        var bmi = (kg / (m * m));
+    } else {
+        var bmi = BMICalculator.calculateBMI(kg, cm);
+        var category = BMICalculator.categorizeBMI(bmi);
         res.render("pages/result", {
-            bmi: bmi 
+            bmi: bmi,
+            category: category
         });
     }  
 });

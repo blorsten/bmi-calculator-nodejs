@@ -2,7 +2,7 @@
 
 (*) --> "user entered BMI"
 
-if "Is input valid" then
+if "if(m == 0 || isNaN(m))" then
     --> [true] "Calculate BMI\nRedirect to result page"
     --> (*)
 else
