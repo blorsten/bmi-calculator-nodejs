@@ -10,11 +10,11 @@ exports.categorizeBMI = function (bmi) {
 
     if(bmi < 18.5)
         return exports.BMI_UNDERWEIGHT;
-    else if (bmi < 25 && bmi > 18.4)
+    else if (bmi < 25 && bmi >= 18.5)
         return exports.BMI_HEALTHY;
-    else if(bmi > 24.9 && bmi < 30)
+    else if(bmi >= 25 && bmi < 30)
         return exports.BMI_OVERWEIGHT;
-    else if(bmi > 29.9)
+    else if(bmi >= 30)
         return exports.BMI_OBESE;
 }
 

@@ -1,7 +1,7 @@
 exports.WTH_NORMAL = "Normal 🥕";
 exports.WTH_OVERWEIGHT = "Overweight 🍪";
 exports.WTH_OBESE = "Obese 🍔";
-exports.WTH_INVALID_GENDER = "Invalid gender";
+exports.WTH_INVALID_GENDER = "Gender not selected";
 exports.WTH_INVALID_INPUT = "Invalid input";
 
 
@@ -18,9 +18,9 @@ exports.calculateWaistToHipCategory = function (gender, ratio) {
 
     switch (gender) {
         case "male":
-            if(ratio < 0.9)
+            if(ratio < 0.95)
                 return exports.WTH_NORMAL;      
-            else if(ratio >= 0.9 && ratio < 1)
+            else if(ratio >= 0.95 && ratio < 1)
                 return exports.WTH_OVERWEIGHT;
             else if(ratio >= 1)
                 return exports.WTH_OBESE;
