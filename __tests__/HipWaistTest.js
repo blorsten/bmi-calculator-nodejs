@@ -1,9 +1,5 @@
 import HipWaistCalculator from "../HipWaistCalculator";
 
-beforeAll( () => {
-
-});
-
 describe("Test WaistToHip Ratio", () => {
     test("Test with equal hip and waist", () => {
         var waist = 90;
@@ -142,8 +138,4 @@ describe("Test category calculation", () => {
 
         expect(category).toBe(HipWaistCalculator.WTH_OBESE);
     });
-});
-
-afterAll(() => {
-
 });

@@ -1,9 +1,5 @@
 import BMICalculator from "../BMICalculator";
 
-beforeAll( () => {
-
-});
-
 test("Invalid test negative numbers", () => {
     var bmi = -132;
     var category = BMICalculator.categorizeBMI(bmi);
@@ -65,8 +61,4 @@ test("Obese test", () => {
     var category = BMICalculator.categorizeBMI(bmi);
 
     expect(category).toBe(BMICalculator.BMI_OBESE);
-});
-
-afterAll(() => {
-
 });
