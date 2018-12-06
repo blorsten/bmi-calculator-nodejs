@@ -1,6 +1,6 @@
-exports.WTH_NORMAL = "Normal";
-exports.WTH_OVERWEIGHT = "Overweight";
-exports.WTH_OBESE = "Obese";
+exports.WTH_NORMAL = "Normal :)";
+exports.WTH_OVERWEIGHT = "Overweight :(";
+exports.WTH_OBESE = "Obese 👌";
 exports.WTH_INVALID_GENDER = "Invalid gender";
 exports.WTH_INVALID_INPUT = "Invalid input";
 

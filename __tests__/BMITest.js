@@ -21,6 +21,9 @@ test("test with valid input", async () => {
   await page.waitForSelector("#cm");
   await page.type("#cm", "123");
   await page.type("#kg", "123");
+  await page.type("#waist", "123");
+  await page.type("#hip", "123");
+  await page.click("#male");
   await page.click("#submitButton");
   await page.waitForSelector("#resultNumber");
 
