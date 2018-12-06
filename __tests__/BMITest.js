@@ -9,7 +9,7 @@ const height = 720;
 beforeAll(async () => {
     browser = await puppeteer.launch({
       headless: false,
-      //slowMo: 80,
+      slowMo: 80,
       args: [`--window-size=${width},${height}`]
     });
     page = await browser.newPage();
@@ -35,8 +35,11 @@ test("test with valid input", async () => {
 test("Test with invalid input", async() => {
   await page.goto(APP);
   await page.waitForSelector("#cm");
-  await page.type("#cm", "a");
-  await page.type("#kg", "a"); 
+  await page.type("#cm", "123");
+  await page.type("#kg", "123");
+  await page.type("#waist", "a");
+  await page.type("#hip", "a");
+  await page.click("#female"); 
   await Promise.all([
     page.click("#submitButton"),
     page.waitForNavigation({ waitUntil: 'networkidle0' }),
