@@ -1,7 +1,7 @@
-exports.BMI_UNDERWEIGHT = "Underweight :(";
-exports.BMI_HEALTHY = "Healthy :)";
-exports.BMI_OVERWEIGHT = "Overweight :(";
-exports.BMI_OBESE = "Obese :(";
+exports.BMI_UNDERWEIGHT = "Underweight 🍚";
+exports.BMI_HEALTHY = "Healthy 🥦";
+exports.BMI_OVERWEIGHT = "Overweight 🍩";
+exports.BMI_OBESE = "Obese 🎂";
 exports.BMI_INVALID_INPUT = "Invalid Input";
 
 exports.categorizeBMI = function (bmi) {

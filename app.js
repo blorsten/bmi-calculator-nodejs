@@ -22,7 +22,7 @@ app.get("/result", (req, res) => {
     var hip = parseInt(req.query.hip, 10);
     var ratio = WTHCalculator.calculateWaistToHipRatio(waist, hip);
 
-    if(m == 0 || isNaN(m)){
+    if(m == 0 || isNaN(m) || ratio == 0 || isNaN(ratio)){
         res.redirect("/");
     } else {
         var bmi = BMICalculator.calculateBMI(kg, cm);
