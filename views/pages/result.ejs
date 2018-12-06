@@ -7,5 +7,11 @@
     <strong id="resultCategory"><%=category%></strong>
 </div>
 
+<div class="alert alert-success">
+    <strong>Note:</strong>
+    Your body Waist To Hip ratio is:     
+    <strong id="resultNumberWTH"><%= Math.round(wth * 100) / 100 %></strong>
+    <strong id="resultCategoryWTH"><%=wthCategory%></strong>
+</div>
 
 <% include ../partials/footer %>
