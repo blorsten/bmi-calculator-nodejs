@@ -14,7 +14,6 @@ app.get("/", (req, res) => {
     res.render("pages/landing");
 });
 
-
 app.get("/result", (req, res) => {
     var cm = req.query.cm;
     var kg = req.query.kg;
@@ -22,7 +21,7 @@ app.get("/result", (req, res) => {
     var waist = parseInt(req.query.waist, 10);
     var hip = parseInt(req.query.hip, 10);
     var ratio = WTHCalculator.calculateWaistToHipRatio(waist, hip);
-    
+
     if(m == 0 || isNaN(m)){
         res.redirect("/");
     } else {
@@ -36,7 +35,7 @@ app.get("/result", (req, res) => {
             wth: ratio,
             wthCategory: wthCategory
         });
-    }  
+    }
 });
 
 var port = 8080;

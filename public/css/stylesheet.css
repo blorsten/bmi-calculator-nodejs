@@ -1,0 +1,14 @@
+.span-and-input {
+    display: inline-block;
+    width: 100%;
+}
+
+.span-and-input > input {
+    width: auto;
+    display: inline-block;
+    height: auto;
+}
+
+.span-and-input > span {
+    vertical-align: top;
+}
